@@ -32,7 +32,7 @@ function Home() {
         {/*  Intro Text */}
         <div className="z-20 px-4 max-w-3xl">
           <h1 className="text-white text-3xl md:text-5xl font-bold drop-shadow-lg">
-            Hi, I’m Theodora —{" "}
+            Hi, I’m Theodora and you can also call me{" "}
             <span className="italic text-pink-300">“Dora the Explorer”</span>
           </h1>
 
