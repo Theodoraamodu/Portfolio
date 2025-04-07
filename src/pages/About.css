@@ -1,0 +1,76 @@
+/* Avatar Hover */
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+/* Timeline Animation */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Timeline Styling */
+.timeline {
+  position: relative;
+}
+.timeline-item {
+  position: relative;
+  padding-left: 1rem;
+  border-left: 4px solid #ec4899;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0.25rem;
+  width: 12px;
+  height: 12px;
+  background-color: #ec4899;
+  border-radius: 9999px;
+}
+
+/* Avatar Bounce */
+@keyframes avatarBounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03) translateY(-4px); }
+  100% { transform: scale(1); }
+}
+.animate-avatar-bounce {
+  animation: avatarBounce 2s ease-in-out infinite;
+}
+
+/* Aurora Background */
+.about-section {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 20%, #1a1a3f 0%, #0e0e2c 80%);
+  z-index: 0;
+}
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(ellipse at center, rgba(236, 72, 153, 0.1), transparent),
+    radial-gradient(ellipse at center, rgba(59, 130, 246, 0.1), transparent),
+    radial-gradient(ellipse at center, rgba(255, 255, 255, 0.05), transparent);
+  animation: auroraMove 10s linear infinite;
+  z-index: -1;
+}
+@keyframes auroraMove {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-50px, -30px) rotate(180deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
